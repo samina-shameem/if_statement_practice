@@ -10,20 +10,20 @@ form.addEventListener('submit', function (event) {
 
     //retrive i/p values
     const studentName = document.getElementById('studentName').value;
-    const stuentScore = parseInt(document.getElementById('studentScore').value, 10);
+    const studentScore = parseInt(document.getElementById('studentScore').value, 10);
 
     //check datatypes and valide score.
-    if (typeof studentScore === 'number' && stuentScore >= 0 && stuentScore <= 100) {
+    if (typeof studentScore === 'number' && studentScore >= 0 && studentScore <= 100) {
 
         //determine grade using if conditions
         let grade;
-        if (stuentScore >= 90) {
+        if (studentScore >= 90) {
             grade = 'A';
-        } else if (stuentScore >= 80) {
+        } else if (studentScore >= 80) {
             grade = 'B';
-        } else if (stuentScore >= 60) {
+        } else if (studentScore >= 60) {
             grade = 'C';
-        } else if (stuentScore >= 70) {
+        } else if (studentScore >= 70) {
             grade = 'D';
         } else {
             grade = 'F';
@@ -31,7 +31,7 @@ form.addEventListener('submit', function (event) {
 
         //display result using DOM manipulation
         resultDiv.innerHTML = `
-          <p><strong>${studentName}</strong> scored <strong>${stuentScore}</strong>.</p>
+          <p><strong>${studentName}</strong> scored <strong>${studentScore}</strong>.</p>
           <p>Grade:<strong>${grade}</strong></p>
         `;
 
